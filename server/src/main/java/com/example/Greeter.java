@@ -1,22 +1,38 @@
-package com.example;
-
 /**
- * This is a class.
- */
-public class Greeter {
-
-  /**
-   * This is a constructor.
+   A class for producing simple greetings. (Revised to include sayGoodbye)
+*/
+public class Greeter
+{
+   /**
+      Constructs a Greeter object that can greet a person or 
+      entity.
+      @param aName the name of the person or entity who should
+      be addressed in the greetings.
    */
-  public Greeter() {
+   public Greeter(String aName)
+   {
+      name = aName;
+   }
 
-  }
-  
-  /**
-   * @param someone the name of the person
-   * @return greeting string
+   /**
+      Greet with a "Goodbye" message.
+      @return a message containing "Goodbye" and the name of
+      the greeted person or entity.
    */
-  public final String greet(final String someone) {
-    return String.format("Hello, %s!", someone);
-  }
+   public String sayGoodbye()
+   {
+      return "Goodbye, " + name + "!";
+   }
+
+   /**
+      Greet with a "Hello" message.
+      @return a message containing "Hello" and the name of
+      the greeted person or entity.
+   */
+   public String sayHello()
+   {
+      return "Hello, " + name + "!";
+   }
+
+   private String name;
 }
